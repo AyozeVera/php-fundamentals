@@ -16,10 +16,11 @@
     <h1>Tuts+ Sites</h1>
     <ul>
       <?php
-        foreach ($tuts_sites as $name => $url) {
-          echo "<li><a href='$url'>" . ucwords($name) . "+</a></li>";
-        }
-      ?>
+        foreach ($tuts_sites as $name => $url) : ?>
+          <li>
+            <a href="<?php echo $url; ?>"> <?php echo $name; ?></a>
+          </li>
+      <?php endforeach ?>
     </ul>
   </body>
 </html>
