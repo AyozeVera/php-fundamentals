@@ -1,6 +1,9 @@
 <?php
-  $months = array('january', 'february', 'march', 'april', 'may');
-  var_dump($months);
+  $tuts_sites = array('nettuts+', 'psdtuts+', 'webdesigntuts+', 'wptuts+');
+  print_r($tuts_sites);
+  // echo simple strings
+  // print_r arrays or objects with less information
+  // var_dump arrays or objects with much information
 ?>
 <!DOCTYPE html>
 <html>
