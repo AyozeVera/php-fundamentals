@@ -1,6 +1,5 @@
 <?php
-  $tuts_sites = array('nettuts+', 'psdtuts+', 'webdesigntuts+', 'wptuts+');
-  print_r($tuts_sites);
+  $tuts_sites = ['nettuts+', 'psdtuts+', 'webdesigntuts+', 'wptuts+', 'othertuts+'];
 ?>
 <!DOCTYPE html>
 <html>
