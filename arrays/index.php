@@ -17,7 +17,7 @@
     <ul>
       <?php
         foreach ($tuts_sites as $name => $url) {
-          echo "<li><a href='$url'> $name </a></li>";
+          echo "<li><a href='$url'>" . ucwords($name) . "</a></li>";
         }
       ?>
     </ul>
