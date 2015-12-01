@@ -18,7 +18,7 @@
       <?php
         foreach ($tuts_sites as $name => $url) : ?>
           <li>
-            <a href="<?php echo $url; ?>"> <?php echo $name; ?></a>
+            <a href="<?= $url; ?>"> <?= $name; ?></a>
           </li>
       <?php endforeach ?>
     </ul>
