@@ -1,9 +1,6 @@
 <?php
   $tuts_sites = array('nettuts+', 'psdtuts+', 'webdesigntuts+', 'wptuts+');
   print_r($tuts_sites);
-  // echo simple strings
-  // print_r arrays or objects with less information
-  // var_dump arrays or objects with much information
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,6 +9,13 @@
     <title>Arrays</title>
   </head>
   <body>
-    <h1>Arrays</h1>
+    <h1>Tuts+ Sites</h1>
+    <ul>
+      <?php
+        foreach ($tuts_sites as $site) {
+          echo  "<li>$site</li>";
+        }
+      ?>
+    </ul>
   </body>
 </html>
