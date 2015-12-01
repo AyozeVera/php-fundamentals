@@ -1,5 +1,10 @@
 <?php
-  $tuts_sites = ['nettuts+', 'psdtuts+', 'webdesigntuts+', 'wptuts+', 'othertuts+'];
+  // $tuts_sites = ['nettuts+', 'psdtuts+', 'webdesigntuts+', 'wptuts+', 'othertuts'];
+  $tuts_sites = [
+    'nettuts+' => 'http://net.tutsplus.com',
+    'psdtuts+' => 'http://psd.tutsplus.com',
+    'wptuts+' => 'http://wp.tutsplus.com',
+  ];
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,8 +16,8 @@
     <h1>Tuts+ Sites</h1>
     <ul>
       <?php
-        foreach ($tuts_sites as $site) {
-          echo  "<li>$site</li>";
+        foreach ($tuts_sites as $name => $url) {
+          echo "<li><a href='$url'> $name </a></li>";
         }
       ?>
     </ul>
