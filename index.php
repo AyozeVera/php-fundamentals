@@ -1,2 +1,5 @@
 <?php
-  echo "Hello World";
+  $name = "Ayoze Vera";
+  echo "Hello $name";
+  echo 'Hello $name';
+  echo 'Hello ' . $name; 
