@@ -1,11 +1,9 @@
 <?php
 
 function array_pluck($toPluck, $array){
-  $ret = [];
-  foreach ($array as $item) {
-    $ret[] = $item[$toPluck];
-  }
-  return $ret;
+  return array_map(function($item) use($toPluck){
+    return $item[$toPluck];
+  }, $array);
 }
 
 $people = [
@@ -14,6 +12,7 @@ $people = [
   ['name' => 'Pepo','age' => 70,'ocupation' => 'Marketing'],
 ];
 
-$plucked = array_pluck('name', $people);
-
-print_r(plucked);
+$names = array_pluck('name', $people);
+foreach ($names as $name ) {
+  echo $name;
+}
