@@ -2,10 +2,14 @@
 
 $month = 'January';
 
-if ($month == 'January') {
-  echo "It's Jan!";
-} elseif($month == 'February') {
-  echo "It's Feb!";
-}else{
-  echo "Not the right month";
+switch ($month) {
+  case 'January':
+    echo "It's Jan!";
+    break;
+  case 'February':
+    echo "It's Feb!";
+    break;
+  default:
+    echo "Not the right month!";
+    break;
 }
