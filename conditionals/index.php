@@ -2,14 +2,10 @@
 
 $month = 'January';
 
-switch ($month) {
-  case 'January':
-    echo "It's Jan!";
-    break;
-  case 'February':
-    echo "It's Feb!";
-    break;
-  default:
-    echo "Not the right month!";
-    break;
-}
+$months=[
+  'January' => 'It is Jan!',
+  'February' => 'It is Feb!',
+  'March' => 'It is March!',
+];
+echo $months['January'];
+echo $months[$month];
