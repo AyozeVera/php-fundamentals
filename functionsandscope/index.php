@@ -1,6 +1,6 @@
 <?php
 
-function say_hello($name){
+function say_hello($name = 'buddy'){
   return "Hi, there $name";
 }
 
