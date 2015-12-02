@@ -1,10 +1,6 @@
 <?php
 
-$arr = [
-  'dev' => 'Ayo',
-  'design' => 'Alex',
-  'ceo' => 'Domingo'
-];
+$arr = ['Ayo','Alex','Domingo'];
 for ($i=0; $i < count($arr); $i++) {
-  echo "<li>$i</li>";
+  echo "<li>$arr[$i]</li>";
 }
