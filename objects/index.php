@@ -1,21 +1,8 @@
 <?php
 
-class Person {
-  public $name;
-  public $job;
+$person = new stdClass;
+$person->first = "Ayo";
+$person->last = "Vera";
+$person->job = "Student";
 
-  public function _construct($name, $job)
-  {
-    $this->name = $name;
-    $this->job = $job;
-  }
-
-  public function communicate($style = 'voice')
-  {
-    return 'communicating with ' . $style;
-  }
-
-}
-
-$p = new Person("Ayo", "Student");
-echo $p->communicate('telepathy');
+var_dump($person);
