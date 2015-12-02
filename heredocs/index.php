@@ -7,6 +7,12 @@ $post = [
   'publish-date'=>'6-10-2012'
 ];
 
-$email = sprintf("<h1>%s</h1><p>%s</p><div>%s</div>", $post['title'], $post['author'],$post['body']);
+$email = <<<EOT
+<h1>{$post['title']}</h1>
+<p>{$post['author']}</p>
+<div>
+  {$post['body']}
+</div>
+EOT;
 
 echo $email;
