@@ -1,7 +1,15 @@
 <?php
+$arr = [
+  'name' => 'Ayo',
+  'age' => 24,
+  'ocupation' => 'Student',
+];
 
-function say_hello($name = 'buddy'){
-  return "Hi, there $name";
+function pp($value){
+  echo '<pre>'
+  print_r($value);
+  echo '</pre>'
 }
 
-echo say_hello('Pepe');
+
+pp($arr);
