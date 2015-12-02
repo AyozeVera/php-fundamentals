@@ -10,4 +10,7 @@ $post = [
 $email = "<h1>{$post['title']}</h1>";
 $email .= "<p> By: {$post['author']}</p>";
 $email .= "<div>{$post['body']}</div>";
+
+$email = sprintf("<h1>%s</h1><p>%s</p><div>%s</div>", $post['title'], $post['author'],$post['body']);
+
 echo $email;
