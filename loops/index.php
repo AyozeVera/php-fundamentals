@@ -5,6 +5,6 @@ $arr = [
   'design' => 'Alex',
   'ceo' => 'Domingo'
 ];
-foreach ($arr as $title => $name) {
-  echo "<li><strong>$title</strong> -- $name</li>";
+for ($i=0; $i < 10; $i++) {
+  echo "<li>$i</li>";
 }
