@@ -8,4 +8,4 @@ $months=[
   'March' => 'It is March!',
 ];
 echo $months['January'];
-echo $months[$month];
+echo isset($months[$month]) ? $months[$month] : 'Not the right month';
