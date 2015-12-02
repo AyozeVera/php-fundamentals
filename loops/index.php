@@ -5,6 +5,6 @@ $arr = [
   'design' => 'Alex',
   'ceo' => 'Domingo'
 ];
-for ($i=0; $i < 10; $i++) {
+for ($i=0; $i < count($arr); $i++) {
   echo "<li>$i</li>";
 }
