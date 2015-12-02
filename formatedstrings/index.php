@@ -3,4 +3,6 @@
 $name = 'Pepe';
 $age = 27;
 
-printf("My name is %s and I am %d", $name, $age);
+$greeting = printf("My name is %s and I am %d", $name, $age);
+
+echo $greeting;
