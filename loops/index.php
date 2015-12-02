@@ -1,6 +1,6 @@
 <?php
 
 $arr = ['Ayo','Alex','Domingo'];
-for ($i=0; $i < count($arr); $i++) {
+while ($i < 10) {
   echo "<li>$arr[$i]</li>";
 }
