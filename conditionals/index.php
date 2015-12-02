@@ -2,7 +2,7 @@
 
 $month = 'January';
 
-if ($month == 'January') { //=== checking data tipe, strict equality
+if ($month == 'January') {
   echo "It's Jan!";
 } elseif($month == 'February') {
   echo "It's Feb!";
