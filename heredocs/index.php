@@ -7,12 +7,6 @@ $post = [
   'publish-date'=>'6-10-2012'
 ];
 
-$email = <<<EOT
-<h1>{$post['title']}</h1>
-<p>{$post['author']}</p>
-<div>
-  {$post['body']}
-</div>
-EOT;
+extract($post);
 
-echo $email;
+echo $author;
