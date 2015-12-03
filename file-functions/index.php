@@ -2,7 +2,7 @@
 
   $images = glob('img/*.{jpg,png,jpeg}', GLOB_BRACE);
   foreach ($images as $image) {
-    echo substr($image, -4);
+    print_r(pathinfo($image));
     echo "\r";
   }
  ?>
