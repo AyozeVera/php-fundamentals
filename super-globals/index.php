@@ -7,6 +7,9 @@
   </head>
   <body>
     <h1>Super Globals</h1>
+    <p>
+      Here is the <?php echo htmlspecialchars('<code>') ?> tag.
+    </p>
     <?php
       $job = $_GET['job'];
       echo isset($job) ?  $job :  "No job";
