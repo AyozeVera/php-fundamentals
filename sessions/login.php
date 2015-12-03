@@ -1,7 +1,13 @@
 <?php
 
 if (isset($_POST['loginForm'])) {
-  echo 'posted';
+  //get values
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+
+  //validate values
+
+  //login + set session
 }
 ?>
 
