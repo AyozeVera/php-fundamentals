@@ -1,5 +1,5 @@
 <?php
-setcookie('fontSize', '50px');
+setcookie('fontSize', '50px', time() + 60*30);
 ?>
 <!DOCTYPE html>
 <html>
