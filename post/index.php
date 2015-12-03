@@ -1,5 +1,9 @@
 <?php
-  if ($_SERVER['REQUEST_METHOD'] == 'POST') print_r($_POST);
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (mail('ayo.verad@gmail.com', 'New Web Site message', $_POST['message'])) {
+      $status = 'Thanks for your message';
+    };
+  }
  ?>
 <!DOCTYPE html>
 <html>
@@ -26,5 +30,8 @@
         <li><input type="submit" value="Go!"></li>
       </ul>
     </form>
+    <?php if (isset($status)) {
+      echo $status;
+    } ?>
   </body>
 </html>
