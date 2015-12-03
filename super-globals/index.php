@@ -11,7 +11,7 @@
       Here is the <?php echo htmlspecialchars('<code>') ?> tag.
     </p>
     <?php
-      $job = $_GET['job'];
+      $job = htmlspecialchars($_GET['job']);
       echo isset($job) ?  $job :  "No job";
     ?>
     <h2>Sub section</h2>
