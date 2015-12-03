@@ -18,7 +18,7 @@
     <?php
       if (isset($_COOKIE['prefs'])) {
         foreach ($_COOKIE['prefs'] as $key => $value) {
-          echo '<li>' . $key . ':' . $value . '</li>';
+          echo '<li>' . htmlspecialchars($key) . ':' . htmlspecialchars($value) . '</li>';
         }
       }
     ?>
