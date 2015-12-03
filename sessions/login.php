@@ -15,6 +15,8 @@ if (isset($_POST['loginForm'])) {
     //login + set session
     $_SESSION['username'] = $username;
     header("Location: admin.php");
+  }else {
+    $status = "Incorrect login credentials";
   }
 }
 ?>
@@ -43,7 +45,7 @@ if (isset($_POST['loginForm'])) {
           <input type="submit" name="loginForm" value="Login">
         </li>
       </ul>
-
     </form>
+    <?= $status ?>
   </body>
 </html>
