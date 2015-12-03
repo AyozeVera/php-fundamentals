@@ -7,7 +7,7 @@
   <body>
     <h1>The Y Fan Website</h1>
     <p>
-      Your are the X visitor
+      Your are the <?php echo $count; ?> visitor
     </p>
   </body>
 </html>
