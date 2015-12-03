@@ -6,6 +6,6 @@
   </head>
   <body>
     <h1>Super Globals</h1>
-    <?php echo $name ?>
+    <?php echo htmlspecialchars($name) ?>
   </body>
 </html>

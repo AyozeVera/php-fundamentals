@@ -7,13 +7,6 @@
   </head>
   <body>
     <h1>Super Globals</h1>
-    <p>
-      Here is the <?php echo htmlspecialchars('<code>') ?> tag.
-    </p>
-    <?php
-      $job = htmlspecialchars($_GET['job']);
-      echo isset($job) ?  $job :  "No job";
-    ?>
-    <h2>Sub section</h2>
+    <a href="super-globals/about.php?name=Ayo">About</a>
   </body>
 </html>
