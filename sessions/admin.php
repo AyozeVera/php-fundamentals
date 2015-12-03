@@ -3,7 +3,7 @@
 
   session_start();
 
-  if (is_logged_in();) {
+  if (!is_logged_in()) {
     header('Location: login.php');
     die();
   }
