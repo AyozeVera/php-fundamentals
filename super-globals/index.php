@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<?php
-  $name = $_GET['name'];
-?>
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -9,6 +7,10 @@
   </head>
   <body>
     <h1>Super Globals</h1>
-    <?php echo $name ?>
+    <?php
+      $job = $_GET['job'];
+      echo isset($job) ?  $job :  "No job";
+    ?>
+    <h2>Sub section</h2>
   </body>
 </html>
