@@ -1,14 +1,7 @@
 <?php
   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     setcookie('fontSize', $_POST['font-size'], time() + 60 * 60);
-  }
-
-  if (isset($_POST['font-size'])) {
-    $font_size = $_POST['font-size'];
-  }elseif (isset($_COOKIE['fontSize'])) {
-    $font_size = $_COOKIE['fontSize'];
-  } else {
-    $font_size = 16;
+    header('Location: font.php');
   }
  ?>
  <!DOCTYPE html>
@@ -32,7 +25,7 @@
        </li>
      </form>
      <h1>My Page</h1>
-     <p style="font-size: <?= $font_size?>px;">
+     <p style="font-size: <?= $_COOKIE['fontSize']?>px;">
        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
