@@ -4,5 +4,6 @@ function is_logged_in(){
   return isset($_SESSION['username']);
 }
 
-// header('Location: login.php');
-// die();
+function validate_user_creds($username, $password){
+  return ($username === USERNAME && $password === PASSWORD);
+}

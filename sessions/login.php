@@ -1,8 +1,8 @@
 <?php
-session_start();
+include 'config.php';
+include 'functions.php';
 
-define('USERNAME', 'ayo');
-define('PASSWORD', '1234');
+session_start();
 
 if (isset($_POST['loginForm'])) {
   //get values
@@ -10,9 +10,7 @@ if (isset($_POST['loginForm'])) {
   $password = $_POST['password'];
 
   //validate values
-  if ($username === USERNAME && $password === PASSWORD) {
-
-    //login + set session
+  if (validate_user_creds($username, $password)) {
     $_SESSION['username'] = $username;
     header("Location: admin.php");
   }else {
