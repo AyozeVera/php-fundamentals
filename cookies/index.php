@@ -1,5 +1,7 @@
 <?php
-setcookie('fontSize', '50px', time() + 60*30);
+  setcookie('prefs[fontSize]', '20px');
+  setcookie('prefs[favouriteCategory]', 'news');
+  setcookie('prefs[screenWidth]', '1024');
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,10 +15,13 @@ setcookie('fontSize', '50px', time() + 60*30);
     <title></title>
   </head>
   <body>
-    <p>
-      Hi there, how are your?
-    </p>
-    <pre>
+    <?php
+      if (isset($_COOKIE['prefs'])) {
+        foreach ($_COOKIE['prefs'] as $key => $value) {
+          echo '<li>' . $key . ':' . $value . '</li>';
+        }
+      }
+    ?>
     </pre>
   </body>
 </html>
