@@ -6,6 +6,9 @@
   </head>
   <body>
     <h1>Super Globals</h1>
-    <?php echo htmlspecialchars($name) ?>
+    <?php
+      $name = $_GET['name'];
+      echo isset($name)? htmlspecialchars($name) : 'No name'
+    ?>
   </body>
 </html>
