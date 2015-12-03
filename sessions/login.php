@@ -1,7 +1,7 @@
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  echo "Posted";
+if (isset($_POST['loginForm'])) {
+  echo 'posted';
 }
 ?>
 
