@@ -9,7 +9,7 @@
   </head>
   <body>
     <h1>Join the Mailing List</h1>
-    <form class="" action="" method="post">
+    <form action="" method="post">
       <?php if (isset($status))   echo $status; ?>
       <ul>
         <li><label for="name">Your Name:</label></li>
