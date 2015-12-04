@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $status = 'Please provide a name and email';
   }else {
     add_register_user($name, $email);
-    $status = 'You have been added.'
+    $status = 'You have been added.';
   }
 }
 
