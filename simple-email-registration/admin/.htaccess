@@ -1,0 +1,6 @@
+#deny everyone but myslef
+<Limit GET POST PUT>
+  order deny,allow
+  deny from all
+  allow from 83.35.194.170
+</Limit>
