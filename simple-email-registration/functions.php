@@ -18,5 +18,12 @@ function validate_email($email){
 }
 
 function get_registered_users($path = MAILING_LIST){
-
+  $users = file($path);
+  if (count($users)) {
+    return array_map(function($user){
+      $bits = explode(': ', $user);
+      return array_map('htmlspecialchars', $bits);
+    },$users);
+  }
+  explode(': ', $users[0]);
 }
