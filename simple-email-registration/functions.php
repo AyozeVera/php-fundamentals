@@ -1,6 +1,6 @@
 <?php
 
-define('MAILING_LIST', 'mailing_list.php');
+define('MAILING_LIST', '../mailing_list.php');
 function add_register_user($name, $email){
   // secure this file
   file_put_contents(MAILING_LIST, "$name: $email\n", FILE_APPEND );
