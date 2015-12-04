@@ -10,7 +10,7 @@
   <body>
     <h1>Join the Mailing List</h1>
     <form action="" method="post">
-      <?php if (isset($status))   echo $status; ?>
+      <?php if (isset($status)) echo $status; ?>
       <ul>
         <li><label for="name">Your Name:</label></li>
         <li><input type="text" name="name" value="<?= old('name'); ?>"></li>
