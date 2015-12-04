@@ -13,11 +13,11 @@
       <?php if (isset($status))   echo $status; ?>
       <ul>
         <li><label for="name">Your Name:</label></li>
-        <li><input type="text" name="name" value=""></li>
+        <li><input type="text" name="name" value="<?= old('name'); ?>"></li>
       </ul>
       <ul>
         <li><label for="email">Your Email:</label></li>
-        <li><input type="text" name="email" value=""></li>
+        <li><input type="text" name="email" value="<?= old('email'); ?>"></li>
       </ul>
       <ul>
         <li><input type="submit" value="Sign Up"></li>
