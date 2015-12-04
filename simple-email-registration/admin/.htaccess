@@ -3,4 +3,5 @@
   order deny,allow
   deny from all
   allow from 83.35.194.170
+  allow from ::1 
 </Limit>
