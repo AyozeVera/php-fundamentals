@@ -13,7 +13,7 @@ try {
   $stmt->bindParam(':letter', $letter, PDO::PARAM_INT);
   $stmt->execute();
 
-  while ($row = $stmt->fetch()) {
+  while ($row = $stmt->fetch(PDO::FETCH_OBJ)) {
     print_r($row);
   }
 
