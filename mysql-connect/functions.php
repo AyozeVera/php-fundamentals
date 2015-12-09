@@ -10,7 +10,8 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   $stmt = $conn->prepare('SELECT * FROM users WHERE id = :id');
-  $stmt->execute(['id' => $id]);
+  $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+  $stmt->execute();
 
   while ($row = $stmt->fetch()) {
     print_r($row);
