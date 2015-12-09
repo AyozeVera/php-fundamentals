@@ -14,7 +14,7 @@ try {
   $stmt->setFetchMode(PDO::FETCH_OBJ);
   $stmt->execute();
 
-  while ($row = $stmt->fetch(PDO::FETCH_OBJ)) {
+  while ($row = $stmt->fetch()) {
     print_r($row);
   }
 
