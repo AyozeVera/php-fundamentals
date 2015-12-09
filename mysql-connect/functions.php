@@ -11,6 +11,7 @@ try {
 
   $stmt = $conn->prepare('SELECT * FROM users WHERE name LIKE :letter');
   $stmt->bindParam(':letter', $letter, PDO::PARAM_INT);
+  $stmt->setFetchMode(PDO::FETCH_OBJ);
   $stmt->execute();
 
   while ($row = $stmt->fetch(PDO::FETCH_OBJ)) {
