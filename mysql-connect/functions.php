@@ -20,9 +20,7 @@ try {
 
   $username = "Ancor";
   $stmt->execute();
-
-  $result = $stmt->fetchAll();
-
+ 
 } catch (PDOExpection $e) {
   echo 'Error: ' . $e->getMessage();
 }
