@@ -21,8 +21,8 @@ function query($query, $bindings, $conn)
 {
   $stmt = $conn->prepare($query);
   $stmt->execute($bindings);
-  $results = $stmt->fetchAll();
-  return $results ? $results : false; 
+  $results = $stmt->fetch();
+  return $results ? $results : false;
 }
 
 function get($tablename, $conn)

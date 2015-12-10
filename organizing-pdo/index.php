@@ -1,22 +1,19 @@
-
 <?php
-
 require 'functions.php';
-
 $conn = connect($config);
 if ($conn) {
   $users = get('users', $conn);
-  $r = query("SELECT * FROM users WHERE id = :id", ['id' => (int)$_GET['id']], $conn);
-} else die('Could not connect to the DB.');
+  $id = isset($_GET['id']) ? $_GET['id'] : 1;
+  $r = query("SELECT * FROM users WHERE id = :id", ['id' => $id], $conn);
+} else {
+  die('Could not connect to the DB.');
+}
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>
-      PDO
-  </title>
+  <title>PDO</title>
 </head>
 <body>
   <?php
@@ -28,12 +25,8 @@ if ($conn) {
     echo 'No row returned.';
   }
   ?>
-  <h1> <?php
-    if ($r) {
-      print_r($r);
-    } else {
-      echo "No rows";
-    };
-  ?> </h1>
+  <?php if ($r) : ?>
+    <h1> <?php  echo $r['name']; ?>'s Profile</h1>
+  <?php endif; ?>
 </body>
 </html>
