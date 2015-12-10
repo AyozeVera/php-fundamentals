@@ -6,7 +6,7 @@ require 'functions.php';
 $conn = connect($config);
 if ($conn) {
   $users = get('users', $conn);
-  $r = query("SELECT * FROM users WHERE id = :id", ['id' => 2], $conn);
+  $r = query("SELECT * FROM users WHERE id = :id", ['id' => (int)$_GET['id']], $conn);
 } else die('Could not connect to the DB.');
 ?>
 
