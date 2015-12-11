@@ -1,5 +1,5 @@
-<?php
+<?php namespace App\DB;
   require 'functions.php';
 
-  echo App\DB\connect();
-  echo App\DB\query();
+  echo connect();
+  echo query();
