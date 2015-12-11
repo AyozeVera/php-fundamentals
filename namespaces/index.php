@@ -4,5 +4,5 @@
 
   use App\DB;
 
-  echo connect();
-  echo query();
+  echo DB\connect();
+  echo DB\query();
