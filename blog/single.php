@@ -8,6 +8,5 @@ if (!$post) {
   header('location:/blog');
 }
 
-$view_path = 'views/single.tmpl.php';
-
-include 'views/layout.php';
+$data = ['post' => $post];
+view('single', $data);
