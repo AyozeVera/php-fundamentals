@@ -13,4 +13,9 @@
       <input type="submit" name="send" value="Crear">
     </li>
   </ul>
+  <?php if (isset($status)) : ?>
+    <p>
+      <?php echo $status; ?>
+    </p>
+  <?php endif; ?>
 </form>

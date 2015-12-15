@@ -3,7 +3,16 @@
 require '../blog.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  echo 'Form was posted';
+  $title = $_POST['title'];
+  $body = $_POST['body'];
+
+  if (empty($title) || empty($body)) {
+    $status = 'Please fill out both inputs.';
+  } else {
+    $status = '';
+  }
 }
 
-view('admin/create');
+$data = ['status' => $status];
+
+view('admin/create', $data);
