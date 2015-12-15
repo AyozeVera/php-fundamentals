@@ -9,5 +9,6 @@
 
   $posts = DB\get('posts', $conn);
 
-  $view_path = 'vies/index.tmpl.php';
-  include 'views\layout.php';
+  $view_path = 'views/index.tmpl.php';
+
+  include 'views/layout.php';
