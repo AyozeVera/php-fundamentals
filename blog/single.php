@@ -7,9 +7,10 @@ if (!$conn) {
   die('Connection error.');
 }
 
-$post = DB\query('SELECT * FROM posts WHERE id = :id',
-                ['id' => $_GET['id']],
-                $conn);
+$post = DB\get_by_id($_GET['id'], $conn);
+// query('SELECT * FROM posts WHERE id = :id',
+//                 ['id' => $_GET['id']],
+//                 $conn);
 
 if (!$post) {
   header('location:/blog');

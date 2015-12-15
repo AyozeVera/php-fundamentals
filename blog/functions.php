@@ -36,3 +36,16 @@ function get($tablename, $conn, $limit = 10)
   }
 
 }
+
+function get_by_id($id, $conn)
+{
+  try {
+    $stmt = $conn->prepare('SELECT * FROM posts WHERE id = :id');
+    $stmt->execute(['id' => $id]);
+    $result = $stmt->fetch();
+    return $result ? $result : false;
+  } catch (Exception $e) {
+    return false;
+  }
+
+}
