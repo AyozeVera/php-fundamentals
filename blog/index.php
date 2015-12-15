@@ -1,14 +1,8 @@
 <?php
-  require 'functions.php';
-  use Blog\DB;
+require 'blog.php';
+use Blog\DB;
+$posts = DB\get('posts', $conn);
 
-  $conn = DB\connect($config);
-  if (!$conn) {
-    die('Connection error.');
-  }
+$view_path = 'views/index.tmpl.php';
 
-  $posts = DB\get('posts', $conn);
-
-  $view_path = 'views/index.tmpl.php';
-
-  include 'views/layout.php';
+include 'views/layout.php';
