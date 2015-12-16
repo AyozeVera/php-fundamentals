@@ -28,7 +28,7 @@ function query($query, $bindings, $conn)
 function get($tablename, $conn, $limit = 10)
 {
   try {
-    $result = $conn->query("SELECT * FROM $tablename LIMIT $limit");
+    $result = $conn->query("SELECT * FROM $tablename ORDER BY id DESC LIMIT $limit");
     return ($result->rowCount() > 0) ? $result : false;
   } catch (Exception $e) {
     return false;
