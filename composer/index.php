@@ -8,5 +8,5 @@ ActiveRecord\Config:: initialize(function($cfg){
                         ]);
 });
 
-$post = Post::find_by_title("My second post");
-print_r($post);
+$posts = Post::all();
+print_r($posts);
