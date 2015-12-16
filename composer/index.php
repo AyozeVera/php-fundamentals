@@ -10,3 +10,22 @@ ActiveRecord\Config:: initialize(function($cfg){
 
 $posts = Post::all();
 print_r($posts);
+?>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <?php foreach ($posts as $p) : ?>
+      <article>
+        <h2><?php echo $p->title; ?></h2>
+        <div class="body">
+          <?php echo $p->body; ?>
+        </div>
+      </article>
+    <?php endforeach; ?>
+  </body>
+</html>
