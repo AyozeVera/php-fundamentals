@@ -15,9 +15,7 @@ class House {
 }
 
 $house = new House('red');
-echo $house->home_color;
+$house->add_room();
+$house->add_room();
 
-echo "<br>";
-
-$house2 = new House('yellow');
-echo $house2->home_color;
+echo "This {$house->home_color} house has {$house->rooms} rooms.";
