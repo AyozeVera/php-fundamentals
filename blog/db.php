@@ -22,8 +22,7 @@ function query($query, $bindings, $conn)
 {
   $stmt = $conn->prepare($query);
   $stmt->execute($bindings);
-  $results = $stmt->fetch();
-  return $results ? $results : false;
+  return $stmt;
 }
 
 function get($tablename, $conn, $limit = 10)
@@ -39,13 +38,10 @@ function get($tablename, $conn, $limit = 10)
 
 function get_by_id($id, $conn)
 {
-  try {
-    $stmt = $conn->prepare('SELECT * FROM posts WHERE id = :id');
-    $stmt->execute(['id' => $id]);
-    $result = $stmt->fetch();
-    return $result ? $result : false;
-  } catch (Exception $e) {
-    return false;
-  }
+
+  $query = query('SELECT * FROM posts WHERE id = :id LIMIT 1',
+                ['id' => $id],
+                $conn);
+  return $query->fetch();
 
 }
