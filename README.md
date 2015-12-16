@@ -6,7 +6,7 @@
 
 ### How do I get set up? ###
 
-*Just have php>=5.3 installed in your computer
+* Just need php>=5.3 installed in your computer
 
 ### Course###
 
