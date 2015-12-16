@@ -29,3 +29,4 @@ print_r($posts);
     <?php endforeach; ?>
   </body>
 </html>
+ 
